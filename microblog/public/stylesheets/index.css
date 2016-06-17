@@ -1,0 +1,89 @@
+.font-line {
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+}
+.inline-block {
+  display: inline-block;
+}
+.artlist {
+  width: 880px;
+  height: 600px;
+  float: left;
+}
+.artlist .art-box .art {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 20px 10px;
+}
+.artlist .art-box .art .art-title {
+  padding-left: 10px;
+  margin-bottom: 6px;
+  color: #000;
+}
+.artlist .art-box .art .art-title h2 {
+  font-size: 20px;
+  line-height: 30px;
+}
+.artlist .art-box .art:hover .art-title {
+  color: #B1191A;
+}
+.artlist .art-box .art .art-key {
+  padding: 0px 10px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.artlist .art-box .art .art-key em {
+  margin: 0px 4px;
+}
+.artlist .art-box .art .art-txt {
+  padding: 0px 10px;
+  font-size: 14px;
+  color: #333333;
+  line-height: 22px;
+  margin-bottom: 6px;
+  min-height: 66px;
+}
+.artlist .art-box .art .art-txt:hover {
+  color: #242424;
+}
+.artlist .art-box .art .art-txt .art-txt-all {
+  color: #f24343;
+}
+.artlist .art-box .art .art-txt .art-txt-all:hover {
+  color: #B1191A;
+}
+.artlist .art-box .art .art-sum {
+  /*  .art-img {
+            .middle(180px, 120px);
+            float: left;
+            padding: 2px;
+            border: 1px solid #eef1f8;
+            img {
+              max-width: 180px;
+              max-height: 120px;
+            }
+          }*/
+}
+.artlist .art-box .art .art-vote {
+  padding: 0px 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #71c1c1;
+}
+.ccc {
+  width: 10000px;
+  height: 100px;
+  margin-bottom: 100px;
+  float: left;
+  clear: both;
+  background-color: #000033;
+}
+.bb {
+  width: 10px;
+  height: 30px;
+  background-color: #ffff00;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+}

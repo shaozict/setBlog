@@ -1,0 +1,46 @@
+<div class="article">
+    <div class="art-box">
+        <div class="art">
+            <div class="art-title">
+                <h2>原生javascript事件触发器实现</h2>
+            </div>
+            <div class="art-key">
+                <p>标签：<em>事件触发器</em>，<em>trigger</em></p>
+            </div>
+            <div class="art-vote">
+                <p>2016-03-31by 杨杰</p>
+            </div>
+            <div class="art-txt">
+                <p class="par">
+                    事件触发器可以实现自定义事件的调用，以及实现在代码程序中（模拟用户操作）间接实现事件调用。例如在页面上实现“文件上传图片”功能的时候，基于用户体验，期望能够点击元素A时就能打开文件上传弹框，这时，就可以在A元素的事件处理程序中定义事件触发器触发<code>
+                        &lt;input&gt;</code>元素的click事件。
+                </p>
+                <hr>
+                <p class="par">
+                    事件触发器，js类库jQuery中通过$(ele).trigger(evt),触发element元素上的evt类型事件。那么原生js是如何提供这个功能的呢？<br>js提供了三个API：<br>1.evt
+                    = document.createEvent() 创建一个新的Event 对象<br>2.evt.initEvent() 初始化新事件对象的属性<br>3.element.dispatchEvent(evt)
+                    实现事件触发,触发element元素上的evt类型<br>定义了事件触发器方法trigger</p>
+                      <pre>
+							<code class="language-css">
+ var trigger = function(element, event) {
+    if (document.createEventObject) {
+      // IE浏览器支持fireEvent方法
+      var evt = document.createEventObject();
+      return element.fireEvent('on' + event, evt)
+    } else {
+      // 其他标准浏览器使用dispatchEvent方法
+      var evt = document.createEvent('HTMLEvents');
+      // initEvent接受3个参数：
+      // 事件类型，是否冒泡，是否阻止浏览器的默认行为
+      evt.initEvent(event, true, true);
+      return !element.dispatchEvent(evt);
+    }
+  };
+</code></pre>
+            </div>
+
+        </div>
+    </div>
+</div>
+<%-partial("reply")%>
+

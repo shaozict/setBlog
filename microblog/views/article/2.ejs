@@ -1,0 +1,101 @@
+<div class="article">
+    <div class="art-box">
+        <div class="art">
+            <div class="art-title">
+                <h2>Tags irrInput</h2>
+            </div>
+            <div class="art-key">
+                <p>标签：<em>Tags</em><em>随机排列</em><em>印象标签</em></p>
+            </div>
+            <div class="art-vote">
+                <p>2016-05-16 by 杨杰</p>
+            </div>
+            <div class="art-txt">
+                <p class="par">
+                    这是在<a target="_blank" href="http://xoxco.com/projects/code/tagsinput/">
+                    &nbsp;tagsinput&nbsp;</a>
+                    插件基础上进行了扩展。包括重构了部分代码，增加了些许功能。主要是扩展了一个Csys二维空间的随机函数，增加了input标签的随机排列。
+                </p>
+
+                <div class="into">
+                    <iframe class="iframe" src="/iframe/tags.html" width="100%" height="340px"></iframe>
+                </div>
+                <p class="par">
+                    今天主要是想介绍如何产生二维随机坐标，避免出现标签遮挡。<br/>
+                </p>
+                <p class="par">
+                    解决这个问题想了三种思路：<br/>
+                    1,将面板以标签长宽为单位切割成表格，随机用标签填充还未被填充的表格。<br/>
+                    这种方法是一种彻底的简化，随机性低。<br/>
+                    2.轮循产生随机点，直到在随机点放置不再出现遮挡情况。<br/>
+                    这种方法，极端点考虑，可能永远找到到那个随机点。保险起见要设一个最大随机次数。复杂度是 m*O(n2)<br/>
+                    3.找到所有在此次放置标签不会出现遮挡的坐标，建立坐标数组。并在此数组内产生随机点。
+                </p>
+                        <pre>
+							<code class="language-css">
+function Csys(bw, bh, tw, th) {
+  var boxwidth = bw || 500, //面板宽度
+	  boxheight = bh || 500, //面板高度
+	  tagwidth = tw || 110, //标签宽度
+	  tagheight = th || 50, //标签高度
+	  unit = 10; //随机精度（1精度最高）
+  var lenx = Math.floor((boxwidth - tagwidth) / unit),
+	  leny = Math.floor((boxheight - tagheight) / unit);
+  var tx = Math.ceil(tagwidth / unit),
+	  ty = Math.ceil(tagheight / unit);
+  this.csyslist = new Array();
+  this.modlist = new Array();
+  for (var j = 0; j < leny; j++) {
+	  for (var i = 0; i < lenx; i++) {
+	    this.csyslist[j * lenx + i] = j * lenx + i;
+		this.modlist.push(this.csyslist[j * lenx + i]);
+	  }
+  }
+  if (typeof this.gps != "function") {
+	  Csys.prototype.gps = function() {
+	    if (!this.modlist.length) {
+		  for (var j = 0; j < leny; j++) {
+			for (var i = 0; i < lenx; i++) {
+			  this.csyslist[j * lenx + i] = j * lenx + i;
+			  this.modlist.push(this.csyslist[j * lenx + i]);
+			}
+		  }
+		}
+		var lenm = this.modlist.length;
+		var r = Math.floor(Math.random() * (lenm - 1));
+		var ox = this.modlist[r] % lenx,
+			oy = Math.floor(this.modlist[r] / lenx);
+		var minx = ox - tx > 0 ? ox - tx : 0,
+			maxx = ox + tx < lenx ? ox + tx : lenx,
+			miny = oy - ty > 0 ? oy - ty : 0,
+			maxy = oy + ty < leny ? oy + ty : leny;
+		for (var j = miny; j < maxy; j++) {
+			for (var i = minx; i < maxx; i++) {
+				this.csyslist[j * lenx + i] = false;
+			}
+		}
+		this.modlist = [];
+		for (var j = 0; j < leny; j++) {
+			for (var i = 0; i < lenx; i++) {
+				if (typeof(this.csyslist[j * lenx + i]) == "number") {
+					this.modlist.push(this.csyslist[j * lenx + i]);
+				}
+			}
+		}
+		return {
+			"left": ox * unit,
+			"top": oy * unit
+		};
+	  }
+  }
+}
+                            </code>
+                        </pre>
+                <p class="par">
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<%-partial("reply")%>

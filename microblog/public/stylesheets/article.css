@@ -1,0 +1,168 @@
+.font-line {
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+}
+.inline-block {
+  display: inline-block;
+}
+body {
+  line-height: 1;
+  background-color: #ffffff;
+}
+.article {
+  background-color: #fff;
+  width: 880px;
+}
+.article .art-box {
+  padding: 40px 40px;
+}
+.article .art-box .art {
+  margin-bottom: 20px;
+}
+.article .art-box .art .art-title {
+  margin-bottom: 6px;
+}
+.article .art-box .art .art-title h2 {
+  font-size: 22px;
+}
+.article .art-box .art .art-key {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.article .art-box .art .art-txt {
+  font-size: 16px;
+  color: #333333;
+  line-height: 20px;
+  margin-bottom: 6px;
+}
+.article .art-box .art .art-txt:hover {
+  color: #242424;
+}
+.article .art-box .art .art-txt a {
+  color: #44C7F4;
+}
+.article .art-box .art .art-txt a:hover {
+  color: #00ADEE;
+}
+.article .art-box .art .art-txt .art-txt-all {
+  color: #f24343;
+}
+.article .art-box .art .art-txt .art-txt-all:hover {
+  color: #B1191A;
+}
+.article .art-box .art .art-vote {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666666;
+}
+.article pre {
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  padding-top: 0px;
+  max-height: 400px;
+  overflow: auto;
+  word-break: keep-all;
+  background-color: #F6F6F6;
+  border-left: 4px solid #C4CDD4;
+  line-height: 1.5em;
+  font-family: "Helvetica Regular";
+  tab-size: 4;
+  /* ��������ȱʡ��ʽ (������) */
+  /* �������Ļ��챳����ɫ */
+  /* ������ɫ */
+}
+.article pre::-webkit-scrollbar {
+  width: 10px;
+}
+.article pre::-webkit-scrollbar-track {
+  background-color: #E7E7E7;
+  box-shadow: 0px 0px 1px 1px #C4CDD4 inset;
+  border-radius: 5px;
+}
+.article pre::-webkit-scrollbar-thumb {
+  background-color: #FCFCFC;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 1px #C4CDD4 inset;
+}
+.article .into {
+  margin: 16px auto;
+  padding: 10px;
+  width: 680px;
+  background-color: #f5f2f0;
+  border-radius: 6px;
+}
+.article .into .iframe {
+  border: 0px;
+  overflow: auto;
+}
+.reply {
+  background-color: #ffffff;
+  position: relative;
+  max-width: 880px;
+}
+.reply .rep-box .rep-header {
+  height: 30px;
+  line-height: 30px;
+  background-color: #f5f2f0;
+  padding-left: 20px;
+}
+.reply .rep-box .rep-cell {
+  padding: 4px 0px 10px 0px;
+  margin: 0px 30px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.reply .rep-box .rep-cell .user-inf {
+  line-height: 24px;
+}
+.reply .rep-box .rep-cell .user-inf .f-name {
+  color: #666;
+}
+.reply .rep-box .rep-cell .user-inf .f-time {
+  color: #71c1c1;
+}
+.reply .rep-box .rep-cell .user-content {
+  color: #333;
+  font-size: 14px;
+  line-height: 25px;
+  margin-left: 10px;
+}
+.reply .rep-add .add-header {
+  height: 30px;
+  margin: 0px 30px;
+  padding: 10px 0px;
+}
+.reply .rep-add .add-header a.add-on {
+  height: 30px;
+  background-color: #0084ff;
+  float: left;
+  line-height: 30px;
+  text-align: center;
+  padding: 0px 10px;
+  color: #ffffff;
+}
+.reply .rep-add .add-in {
+  margin: 20px 30px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.reply .rep-add .add-in .u-in {
+  margin-bottom: 20px;
+}
+.reply .rep-add .add-in .u-in textarea {
+  width: 90%;
+  height: 120px;
+  max-height: 120px;
+  border: 1px solid #b3d4fc;
+  resize: none;
+}
+.reply .rep-add .add-in .u-in .spl {
+  margin-right: 10px;
+}
+.reply .rep-add .add-in .u-in input {
+  height: 24px;
+  width: 320px;
+  border: 1px solid #b3d4fc;
+}

@@ -1,0 +1,113 @@
+body {
+  background-color: #f5f2f0;
+}
+.container {
+  margin: 10px;
+}
+.container .mes-left {
+  width: 50%;
+  display: inline-block;
+  height: 320px;
+  background-color: #fff;
+  float: left;
+}
+.container .mes-left .modal-cot input {
+  display: block;
+  margin-left: 20px;
+  width: 160px;
+  line-height: 28px;
+  height: 28px;
+  border: 1px solid #dddddd;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+.container .mes-left .modal-cot .dl-list .dd-item {
+  margin: 10px;
+}
+.container .mes-left .modal-cot .dl-list .dd-item span {
+  display: inline-block;
+  background-color: #0084ff;
+  color: #fff;
+  padding: 0px 0px;
+  border-radius: 8px;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+  width: 65px;
+  height: 20px;
+  max-width: 80px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  margin-right: 20p;
+}
+.container .mes-left .modal-cot .modal-in {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.container .mes-left .modal-cot .tag_alert {
+  float: left;
+  margin-left: 24px;
+  margin-top: 5px;
+}
+.container .mes-left .modal-btns {
+  text-align: center;
+}
+.container .mes-left .modal-btns .btn {
+  display: inline-block;
+  line-height: 28px;
+  height: 28px;
+  font-size: 12px;
+  padding: 0 20px;
+  border-width: 0px;
+  border-style: solid;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.container .mes-right {
+  width: 46%;
+  float: right;
+  display: inline-block;
+  background-color: #fff;
+  padding: 10px;
+}
+.container .mes-right .mes-box {
+  height: 300px;
+  position: relative;
+}
+.container .mes-right .mes-box .tag {
+  display: inline-block;
+  border: 1px solid #0084ff;
+  padding: 0px 4px;
+  border-radius: 8px;
+  line-height: 24px;
+  font-size: 13px;
+  text-align: center;
+  height: 24px;
+  max-width: 72px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.container .mes-right .mes-box .tag:hover a {
+  display: block;
+}
+.container .mes-right .mes-box .tag a {
+  display: none;
+  color: #ffffff;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.3);
+  filter: alpha(opacity=30);
+  width: 100%;
+  height: 24px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  text-decoration: none;
+}

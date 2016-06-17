@@ -1,0 +1,25 @@
+<div class="artlist">
+    <div class="art-box">
+        <% for(var i = 0;i < artlist.length;i++){ %>
+        <div class="art">
+            <a href=<%= "article/"+artlist[i].href %>>
+                <div class="art-title">
+                    <h2><%= artlist[i].title %></h2>
+                </div>
+                <div class="art-key">
+                    <p>标签：<em><%= artlist[i].key %></em></p>
+                </div>
+                <div class="art-txt">
+                    <p>
+                        <%= artlist[i].abstract %>
+                        <a href=<%= "article/"+artlist[i].href %> class="art-txt-all">阅读全文</a>
+                    </p>
+                </div>
+                <div class="art-vote">
+                    <p><%= artlist[i].date %> by <%= artlist[i].autor %> </p>
+                </div>
+            </a>
+        </div>
+        <% } %>
+    </div>
+</div>

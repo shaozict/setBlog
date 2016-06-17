@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/base.css"/>
+    <link rel='stylesheet' href='/stylesheets/layout.css' />
+    <link rel="stylesheet" href="/stylesheets/index.css"/>
+    <link rel="stylesheet" href="/stylesheets/article.css"/>
+    <link rel="stylesheet" href="/stylesheets/prism.css"/>
+    <script type="text/javascript" src="/javascripts/jquery-1.8.3.min.js"></script>
+  </head>
+  <body>
+  <div class="blog">
+    <div class="sidebar">
+      <div class="bar-lab">
+        <a class="logo distext" href="http://localhost:3000/">勺子餐厅</a>
+
+        <p class="author"><a href="#">杨杰i</a></p>
+
+        <p class="ms"></p>
+      </div>
+      <div class="bar-tabs">
+        <ul class="">
+          <li class="bar-tab"><a href="http://localhost:3000/">所有文章</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main cf">
+      <%- body %>
+    </div>
+  </div>
+  <script type="text/javascript" src="/javascripts/prism.js"></script>
+  </body>
+</html>
