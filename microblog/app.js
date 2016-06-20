@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var partials = require('express-partials');
 //routes����Ŀ��·��֧��,��һ��·�ɿ�����
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var mongodb = require("mongodb");
 var session = require('express-session');

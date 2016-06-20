@@ -68,7 +68,10 @@
                 email:$useremail.val()
             },
             success: function(msg){
-                alert(  msg );
+                $usertext.val("");
+                $username.val("");
+                $useremail.val("");
+                alert( msg );
             }
         })
     })

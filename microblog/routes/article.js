@@ -5,7 +5,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/:number', function(req, res, next) {
-    res.render('article/'+req.params.number, { title: 'Express',type:'article'});
+    res.render('article/'+req.params.number, { title: 'Express',reply:1});
 });
 
 
