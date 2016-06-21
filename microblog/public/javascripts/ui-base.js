@@ -75,6 +75,14 @@
             }
         })
     })
-
-
+})();
+(function () {
+    $(document).on('click.unfold', '[data-dismiss="unfold"]', function () {
+        var $this = $(this)
+        var selector = $this.attr('data-target').split(",");
+        selector.forEach(function(tar){
+            var $target = $(tar);
+            $target.is(":hidden") ? $target.show() : $target.hide();
+        })
+    })
 })();

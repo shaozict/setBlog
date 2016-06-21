@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <title><%=title%></title>
     <link rel="stylesheet" href="/stylesheets/base.css"/>
+    <link rel="stylesheet" href="/stylesheets/font-hmc.css"/>
     <link rel='stylesheet' href='/stylesheets/layout.css' />
     <link rel="stylesheet" href="/stylesheets/index.css"/>
     <link rel="stylesheet" href="/stylesheets/article.css"/>
@@ -26,6 +28,24 @@
         </ul>
       </div>
     </div>
+    <div class="nav">
+      <div class="nav-line">
+        <a id="nav-down" class="logo distext fl"  href="/">勺子餐厅</a>
+        <i class="icon-uniF039 fr" data-dismiss="unfold" data-target="#nav-up,#nav-down"></i>
+      </div>
+      <div id="nav-up" class="bar-box">
+        <div class="bar-lab">
+          <a class="logo distext"  href="/">勺子餐厅</a>
+        </div>
+        <div class="bar-tabs">
+          <ul class="tab-box">
+            <li class=""><a href="/">所有文章</a></li>
+            <li class=""><a href="/">关于我</a></li>
+            <li class=""><a href="/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="main cf">
       <%- body %>
       <%if(typeof reply !== 'undefined' &&reply){%>
@@ -35,5 +55,6 @@
     </div>
   </div>
   <script type="text/javascript" src="/javascripts/prism.js"></script>
+  <script type="text/javascript" src="/javascripts/ui-base.js"></script>
   </body>
 </html>

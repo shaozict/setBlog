@@ -6,25 +6,21 @@
 .inline-block {
   display: inline-block;
 }
-body {
-  line-height: 1;
-  background-color: #ffffff;
-}
 .article {
   background-color: #fff;
-  width: 880px;
+  width: 100%;
 }
 .article .art-box {
-  padding: 40px 40px;
+  padding: 2rem 2rem;
 }
 .article .art-box .art {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 .article .art-box .art .art-title {
   margin-bottom: 6px;
 }
 .article .art-box .art .art-title h2 {
-  font-size: 22px;
+  font-size: 20px;
 }
 .article .art-box .art .art-key {
   margin-bottom: 6px;
@@ -161,8 +157,12 @@ body {
 .reply .rep-add .add-in .u-in .spl {
   margin-right: 10px;
 }
+.reply .rep-add .add-in .u-in .spr {
+  max-width: 320px;
+  width: 90%;
+}
 .reply .rep-add .add-in .u-in input {
   height: 24px;
-  width: 320px;
+  width: 100%;
   border: 1px solid #b3d4fc;
 }

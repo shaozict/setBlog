@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'hmc';
+    src:    url('fonts/hmc.eot?e84u4w');
+    src:    url('fonts/hmc.eot?e84u4w#iefix') format('embedded-opentype'),
+        url('fonts/hmc.ttf?e84u4w') format('truetype'),
+        url('fonts/hmc.woff?e84u4w') format('woff'),
+        url('fonts/hmc.svg?e84u4w#hmc') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'hmc' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniF039:before {
+    content: "\f039";
+}
+.icon-uniF087:before {
+    content: "\f087";
+}
+.icon-uniF088:before {
+    content: "\f088";
+}
+.icon-uniE601:before {
+    content: "\e601";
+}
+.icon-uniE602:before {
+    content: "\e602";
+}
+.icon-uniE603:before {
+    content: "\e603";
+}
+.icon-uniE604:before {
+    content: "\e604";
+}
+.icon-uniE605:before {
+    content: "\e605";
+}
+.icon-uniE606:before {
+    content: "\e606";
+}
+.icon-uniE617:before {
+    content: "\e617";
+}
+

@@ -212,26 +212,106 @@ button {
   margin: 0px auto;
 }
 .sidebar .bar-lab .author {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-size: 16px;
+  line-height: 24px;
   color: #000;
   text-align: center;
   margin-top: 20px;
 }
 .sidebar .bar-lab .ms {
-  font-size: 1.4rem;
-  line-height: 2.0rem;
+  font-size: 14px;
+  line-height: 20px;
   color: #000;
   text-align: center;
 }
 .sidebar .bar-tabs {
   margin-top: 60px;
-  font-size: 1.6rem;
+  font-size: 16px;
+  text-align: center;
+}
+.nav {
+  width: 100%;
+  display: none;
+  padding-top: 12px;
+  padding-bottom: 24px;
+  background-color: #fff;
+}
+.nav .nav-line {
+  margin: 0px 10px;
+}
+.nav .nav-line .logo {
+  display: block;
+  background: url("../images/logo.png") no-repeat center center;
+  background-size: 60px;
+  width: 60px;
+  height: 20px;
+  margin: 0px auto;
+  margin-top: -3px;
+}
+.nav .nav-line i {
+  font-size: 18px;
+  color: #929c98;
+}
+.nav .bar-box {
+  display: none;
+  margin-bottom: -12px;
+}
+.nav .bar-lab .logo {
+  display: block;
+  background: url("../images/logo.png") no-repeat center center;
+  background-size: 160px;
+  width: 160px;
+  height: 60px;
+  margin: 0px auto;
+}
+.nav .bar-lab .author {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  text-align: center;
+  margin-top: 20px;
+}
+.nav .bar-lab .ms {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  text-align: center;
+}
+.nav .bar-tabs .tab-box {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+.nav .bar-tabs .tab-box li {
+  margin-top: 12px;
+  font-size: 16px;
   text-align: center;
 }
 .main {
   margin-left: 16%;
-  background-color: #e7f8f8;
-  padding: 40px 44px;
+  padding: 2rem 2rem;
+  max-width: 880px;
   min-height: 100vh;
+}
+@media only screen and (max-width: 414px) {
+  html {
+    font-size: 62.5%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .nav {
+    display: block;
+  }
+  .main {
+    margin-left: 0px;
+    padding: 16px 16px;
+  }
+}
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 125%;
+  }
 }
