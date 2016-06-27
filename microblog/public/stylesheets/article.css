@@ -85,7 +85,8 @@
 .article .into {
   margin: 16px auto;
   padding: 10px;
-  width: 680px;
+  max-width: 680px;
+  width: 90%;
   background-color: #f5f2f0;
   border-radius: 6px;
 }
@@ -93,76 +94,11 @@
   border: 0px;
   overflow: auto;
 }
-.reply {
-  background-color: #ffffff;
-  position: relative;
-  max-width: 880px;
+.tagiframe {
+  height: 340px;
 }
-.reply .rep-box .rep-header {
-  height: 30px;
-  line-height: 30px;
-  background-color: #f5f2f0;
-  padding-left: 20px;
-}
-.reply .rep-box .rep-cell {
-  padding: 4px 0px 10px 0px;
-  margin: 0px 30px;
-  border-bottom: 1px solid #f0f0f0;
-}
-.reply .rep-box .rep-cell .user-inf {
-  line-height: 24px;
-}
-.reply .rep-box .rep-cell .user-inf .f-name {
-  color: #666;
-}
-.reply .rep-box .rep-cell .user-inf .f-time {
-  color: #71c1c1;
-}
-.reply .rep-box .rep-cell .user-content {
-  color: #333;
-  font-size: 14px;
-  line-height: 25px;
-  margin-left: 10px;
-}
-.reply .rep-add .add-header {
-  height: 30px;
-  margin: 0px 30px;
-  padding: 10px 0px;
-}
-.reply .rep-add .add-header a.add-on {
-  height: 30px;
-  background-color: #0084ff;
-  float: left;
-  line-height: 30px;
-  text-align: center;
-  padding: 0px 10px;
-  color: #ffffff;
-}
-.reply .rep-add .add-in {
-  margin: 20px 30px;
-  padding-bottom: 30px;
-  font-size: 14px;
-  line-height: 24px;
-}
-.reply .rep-add .add-in .u-in {
-  margin-bottom: 20px;
-}
-.reply .rep-add .add-in .u-in textarea {
-  width: 90%;
-  height: 120px;
-  max-height: 120px;
-  border: 1px solid #b3d4fc;
-  resize: none;
-}
-.reply .rep-add .add-in .u-in .spl {
-  margin-right: 10px;
-}
-.reply .rep-add .add-in .u-in .spr {
-  max-width: 320px;
-  width: 90%;
-}
-.reply .rep-add .add-in .u-in input {
-  height: 24px;
-  width: 100%;
-  border: 1px solid #b3d4fc;
+@media only screen and (max-width: 414px) {
+  .tagiframe {
+    height: 680px;
+  }
 }

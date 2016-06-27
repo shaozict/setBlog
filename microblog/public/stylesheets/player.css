@@ -1,0 +1,24 @@
+#player {
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+}
+.playbtn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #000000;
+  filter: alpha(opacity=80);
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 2px 2px 3px #ccc;
+  padding: 10px;
+  position: relative;
+}
+.playbtn i.i-music {
+  font-size: 30px;
+  color: #fff;
+}

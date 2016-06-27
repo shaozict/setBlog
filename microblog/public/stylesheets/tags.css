@@ -66,15 +66,15 @@ body {
   vertical-align: middle;
 }
 .container .mes-right {
-  width: 46%;
+  width: 49%;
   float: right;
   display: inline-block;
   background-color: #fff;
-  padding: 10px;
 }
 .container .mes-right .mes-box {
   height: 300px;
   position: relative;
+  margin: 10px;
 }
 .container .mes-right .mes-box .tag {
   display: inline-block;
@@ -110,4 +110,13 @@ body {
   font-weight: bold;
   line-height: 24px;
   text-decoration: none;
+}
+@media only screen and (max-width: 414px) {
+  .container .mes-left {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .container .mes-right {
+    width: 100%;
+  }
 }

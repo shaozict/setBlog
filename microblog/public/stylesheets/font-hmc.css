@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'hmc';
-    src:    url('fonts/hmc.eot?e84u4w');
-    src:    url('fonts/hmc.eot?e84u4w#iefix') format('embedded-opentype'),
-        url('fonts/hmc.ttf?e84u4w') format('truetype'),
-        url('fonts/hmc.woff?e84u4w') format('woff'),
-        url('fonts/hmc.svg?e84u4w#hmc') format('svg');
+    src:    url('fonts/hmc.eot?kkqrlg');
+    src:    url('fonts/hmc.eot?kkqrlg#iefix') format('embedded-opentype'),
+    url('fonts/hmc.ttf?kkqrlg') format('truetype'),
+    url('fonts/hmc.woff?kkqrlg') format('woff'),
+    url('fonts/hmc.svg?kkqrlg#hmc') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],.icomoon, [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'hmc' !important;
     speak: none;
@@ -24,8 +24,53 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-uniE607:before {
+    content: "\e607";
+}
+.icon-uniE608:before {
+    content: "\e608";
+}
+.icon-uniE609:before {
+    content: "\e609";
+}
+.icon-uniE60A:before {
+    content: "\e60a";
+}
+.icon-uniE60B:before {
+    content: "\e60b";
+}
+.icon-uniE60C:before {
+    content: "\e60c";
+}
+.icon-uniE6172:before {
+    content: "\e618";
+}
+.icon-uniF0392:before {
+    content: "\f03a";
+}
+.icon-uniF0872:before {
+    content: "\f089";
+}
+.icon-uniF0882:before {
+    content: "\f08a";
+}
+.icon-uniF001:before {
+    content: "\f001";
+}
 .icon-uniF039:before {
     content: "\f039";
+}
+.icon-uniF04A:before {
+    content: "\f04a";
+}
+.icon-uniF04B:before {
+    content: "\f04b";
+}
+.icon-uniF04C:before {
+    content: "\f04c";
+}
+.icon-uniF04E:before {
+    content: "\f04e";
 }
 .icon-uniF087:before {
     content: "\f087";
