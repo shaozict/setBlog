@@ -17,8 +17,20 @@
 
     Player.prototype = {
         init:function(){
-            this.dragElement("#player");
-            this.lazyload("#playpanel");
+            this.createPlay(function(player,playbtn,playpanel){
+                this.dragElement(player);
+                this.lazyload(playpanel);
+            })
+        },
+        createPlay:function(callback){
+            var html = '<div id="player">' +
+                '<div id="playbtn" class="playbtn"><i class="icomoon i-music">&#xf001</i></div>' +
+                '<div id="playpanel" style="display: none"> </div>' +
+                '</div>';
+            $("body").append(html);
+            if(typeof callback=="function"){
+                callback.call(this,"#player","#playbtn","#playpanel");
+            }
         },
         dragElement: function (tar) { //ÍÏ¶¯
             var $target = $(tar);
@@ -71,7 +83,7 @@
         },
         lazyload: function (tar) {   //ÑÓ³Ù¼ÓÔØ ²¥·ÅÆ÷
             var $target = $(tar);
-            var setime = 500;
+            var setime = 1000;
             var parm = this.parm;
             var html = '<iframe id="playifr" ' +
                 'frameborder="no" border="0" marginwidth="0" marginheight="0" width=" ' + parm.width + '" height="' + parm.height + '" ' +
