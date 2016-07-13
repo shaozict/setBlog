@@ -1,0 +1,39 @@
+<h2>html邮件制作实践</h2>
+
+<p>最近经常接到制作页面邮件的需求。本文首先简要介绍了html邮件的制作思路，然后针对工作中页面邮件的特点，提供了一种制作方法。</p>
+
+<h3>一、如何制作html邮件</h3>
+
+<h5>1).html邮件编码</h5>
+
+<p>用于EDM邮件的web网页代码，有一系列特殊要求。eg：1.要显示声明文档类型、编码类型
+（&#39;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;&#39;）；2.使用table 表格来布局；3.使用内联样式；4、引用图片必须上传线上，使用绝对链接。</p>
+
+<p>更详细要求见：<a href="http://blog.163.com/fange01@126/blog/static/12217031201284490379/ ">http://blog.163.com/fange01@126/blog/static/12217031201284490379/</a></p>
+
+<p>制作教程参见： <a href="http://www.w3cplus.com/css/getting-started-with-html-emails.html">http://www.w3cplus.com/css/getting-started-with-html-emails.html</a></p>
+
+<h5>2). 如何将编码置入邮箱，发送邮件。这里介绍使用QQ邮箱制作</h5>
+
+<p>a. 新建一封邮件 b.点击打开格式面板 <img alt="outlook设置" src="/images/i3/w01.jpg"/> c.点击选中html格式  <img alt="outlook设置" src="/images/i3/w02.jpg"/> d.将编码复制正文即可。</p>
+
+<p>&lt;img src=&quot;../images/i3/w04.jpg&quot; alt=&quot;outlook设置&quot;/&gt;</p>
+
+<h3>二、html邮件局限</h3>
+
+<ol><li>1.html邮件存在兼容性问题严重。面向不同的主流邮件客户端需做兼容性测试。</li><li>2.大多数邮件客户端（outlook）会过滤HTML设置,禁止图片下载，导致页面错乱，这取决于用户客户端的设置，无法避免。以outlook为例，</li></ol>
+
+<h3>三、而针对工作中大部分html邮件有以下特点：</h3>
+
+<ol><li>1.内部邮件，在outlook客户端中分发；</li><li>2.形式简单以图片为主，仅要求在图片添加几处可点击超链接。</li></ol>
+
+<p>这种形式简单的邮件以图片为主，考虑到页面兼容性，以及用户设置的问题，并无采用html编写的必要。</p>
+
+<p>下面介绍一种此类邮件的制作思路。</p>
+
+<p>以outlook2010版为例，制作一封带有超链接热区的图片邮件：</p>
+
+<ol><li>1.新建邮件</li><li>2.插入图片。将整张图片按合适大小剪切并顺序插入邮件，避免图片过大加载缓慢</li><li>3.设置图片居中显示。点击导航栏：邮件编辑-文本居中，</li><li><p>4.添加超链接热区。在这里利用插入的“形状”对象添加超链接热区。</p><ol><li>1.插入“形状”对象。点击：插入-形状-矩形</li><li>2.设置透明。右键-打开“设置形状格式”面板。设置填充、线条颜色为透明</li><li>3.添加超链接</li><li><p>4.设置“形状”对象布局格式。右键-打开“其他布局选项面板”，设置如下：</p><p> &lt;img src=&quot;../images/i3/w04.jpg&quot; alt=&quot;outlook设置&quot;/&gt;
+“形状”对象水平位置、垂直位置必须设置为分别相对字符、行。避免在视口大小不一时，位置改变</p></li><li>5.形状”对象移至热区位置。4、5操作顺序不可颠倒。需要在“字符、行”标准下移动</li></ol></li></ol>
+
+<p>这种方法并非制作html邮件，实质是在邮件插入图片。避免html邮件的各种限制。适用于要求给图片添加超链接热区的邮件。</p>
