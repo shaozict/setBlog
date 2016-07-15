@@ -47,6 +47,9 @@ var reply = require('./routes/reply');
 app.use('/reply', reply);   //Ӧ�ü��м��
 app.use('/mes', reply);   //Ӧ�ü��м��
 
+var upload = require('./routes/upload');
+app.use('/upload', upload);   //Ӧ�ü��м��
+
 app.listen(3000);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

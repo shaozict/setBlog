@@ -8,8 +8,7 @@ var Sets = require('../models/sets.js')
 var message = require('./data');
 
 var leavsSet = new Sets({
-    "setName": "leavs",
-    "type": {}
+    "setName": "leavs"
 });
 
 router.get('/', function (req, res, next) {
