@@ -1,341 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>a3</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style type="text/css">
-/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
-/* Author: Nicolas Hery - http://nicolashery.com */
-/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
-/* Source: https://github.com/nicolahery/markdownpad-github */
+<div class="article">
+    <div class="art-box">
+        <div class="art">
+            <div class="art-title">
+                <h2>html邮件制作实践</h2>
+            </div>
+            <div class="art-key">
+                <p>标签：<em>html邮件</em></p>
+            </div>
+            <div class="art-vote">
+                <p>2016-07-06 by 杨杰</p>
+            </div>
+            <div id="md" class="art-txt">
+                <p>最近经常接到制作页面邮件的需求。本文首先简要介绍了html邮件的制作思路，然后针对工作中页面邮件的特点，提供了一种制作方法。</p>
 
-/* RESET
-=============================================================================*/
+                <h3>一、如何制作html邮件</h3>
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+                <h5>1).html邮件编码</h5>
 
-/* BODY
-=============================================================================*/
+                <p>用于EDM邮件的web网页代码，有一系列特殊要求。eg：1.要显示声明文档类型、编码类型
+                    （&#39;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;&#39;）；2.使用table 表格来布局；3.使用内联样式；4、引用图片必须上传线上，使用绝对链接。</p>
 
-body {
-  font-family: Helvetica, arial, freesans, clean, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  padding: 20px;
-  max-width: 960px;
-  margin: 0 auto;
-}
+                <p>更详细要求见：<a href="http://blog.163.com/fange01@126/blog/static/12217031201284490379/ ">http://blog.163.com/fange01@126/blog/static/12217031201284490379/</a></p>
 
-body>*:first-child {
-  margin-top: 0 !important;
-}
+                <p>制作教程参见： <a href="http://www.w3cplus.com/css/getting-started-with-html-emails.html">http://www.w3cplus.com/css/getting-started-with-html-emails.html</a></p>
 
-body>*:last-child {
-  margin-bottom: 0 !important;
-}
+                <h5>2). 如何将编码置入邮箱，发送邮件。这里介绍使用QQ邮箱制作</h5>
 
-/* BLOCKS
-=============================================================================*/
+                <p>a. 新建一封邮件 b.点击打开格式面板 <img alt="outlook设置" src="/images/i3/w01.jpg"/> c.点击选中html格式  <img alt="outlook设置" src="/images/i3/w02.jpg"/> d.将编码复制正文即可。</p>
 
-p, blockquote, ul, ol, dl, table, pre {
-  margin: 15px 0;
-}
+                <h3>二、html邮件局限</h3>
 
-/* HEADERS
-=============================================================================*/
+                <p><img alt="outlook设置" src="/images/i3/w03.jpg"/></p>
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0 10px;
-  padding: 0;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-}
+                <ol><li>1.html邮件存在兼容性问题严重。面向不同的主流邮件客户端需做兼容性测试。</li><li>2.大多数邮件客户端（outlook）会过滤HTML设置,禁止图片下载，导致页面错乱，这取决于用户客户端的设置，无法避免。以outlook为例，</li></ol>
 
-h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
-  font-size: inherit;
-}
+                <h3>三、而针对工作中大部分html邮件有以下特点：</h3>
 
-h1 {
-  font-size: 28px;
-  color: #000;
-}
+                <ol><li>1.内部邮件，在outlook客户端中分发；</li><li>2.形式简单以图片为主，仅要求在图片添加几处可点击超链接。</li></ol>
 
-h2 {
-  font-size: 24px;
-  border-bottom: 1px solid #ccc;
-  color: #000;
-}
+                <p>这种形式简单的邮件以图片为主，考虑到页面兼容性，以及用户设置的问题，并无采用html编写的必要。</p>
 
-h3 {
-  font-size: 18px;
-}
+                <p>下面介绍一种此类邮件的制作思路。</p>
 
-h4 {
-  font-size: 16px;
-}
+                <p>以outlook2010版为例，制作一封带有超链接热区的图片邮件：</p>
 
-h5 {
-  font-size: 14px;
-}
+                <ol><li>1.新建邮件</li><li>2.插入图片。将整张图片按合适大小剪切并顺序插入邮件，避免图片过大加载缓慢</li><li>3.设置图片居中显示。点击导航栏：邮件编辑-文本居中，</li><li><p>4.添加超链接热区。在这里利用插入的“形状”对象添加超链接热区。</p><ol><li>1.插入“形状”对象。点击：插入-形状-矩形</li><li>2.设置透明。右键-打开“设置形状格式”面板。设置填充、线条颜色为透明</li><li>3.添加超链接</li><li><p>4.设置“形状”对象布局格式。右键-打开“其他布局选项面板”，设置如下：</p>
+                                <p> <img alt="outlook设置" src="/images/i3/w04.jpg"/></p>
+                                “形状”对象水平位置、垂直位置必须设置为分别相对字符、行。避免在视口大小不一时，位置改变</p></li><li>5.形状”对象移至热区位置。4、5操作顺序不可颠倒。需要在“字符、行”标准下移动</li></ol></li></ol>
 
-h6 {
-  color: #777;
-  font-size: 14px;
-}
+                <p>这种方法并非制作html邮件，实质是在邮件插入图片。避免html邮件的各种限制。适用于要求给图片添加超链接热区的邮件。</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
-  margin-top: 10px;
-}
-
-/* LINKS
-=============================================================================*/
-
-a {
-  color: #4183C4;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* LISTS
-=============================================================================*/
-
-ul, ol {
-  padding-left: 30px;
-}
-
-ul li > :first-child, 
-ol li > :first-child, 
-ul li ul:first-of-type, 
-ol li ol:first-of-type, 
-ul li ol:first-of-type, 
-ol li ul:first-of-type {
-  margin-top: 0px;
-}
-
-ul ul, ul ol, ol ol, ol ul {
-  margin-bottom: 0;
-}
-
-dl {
-  padding: 0;
-}
-
-dl dt {
-  font-size: 14px;
-  font-weight: bold;
-  font-style: italic;
-  padding: 0;
-  margin: 15px 0 5px;
-}
-
-dl dt:first-child {
-  padding: 0;
-}
-
-dl dt>:first-child {
-  margin-top: 0px;
-}
-
-dl dt>:last-child {
-  margin-bottom: 0px;
-}
-
-dl dd {
-  margin: 0 0 15px;
-  padding: 0 15px;
-}
-
-dl dd>:first-child {
-  margin-top: 0px;
-}
-
-dl dd>:last-child {
-  margin-bottom: 0px;
-}
-
-/* CODE
-=============================================================================*/
-
-pre, code, tt {
-  font-size: 12px;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
-}
-
-code, tt {
-  margin: 0 0px;
-  padding: 0px 0px;
-  white-space: nowrap;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  border-radius: 3px;
-}
-
-pre>code {
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent;
-}
-
-pre {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px;
-}
-
-pre code, pre tt {
-  background-color: transparent;
-  border: none;
-}
-
-kbd {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #DDDDDD;
-    background-image: linear-gradient(#F1F1F1, #DDDDDD);
-    background-repeat: repeat-x;
-    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
-    border-image: none;
-    border-radius: 2px 2px 2px 2px;
-    border-style: solid;
-    border-width: 1px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 10px;
-    padding: 1px 4px;
-}
-
-/* QUOTES
-=============================================================================*/
-
-blockquote {
-  border-left: 4px solid #DDD;
-  padding: 0 15px;
-  color: #777;
-}
-
-blockquote>:first-child {
-  margin-top: 0px;
-}
-
-blockquote>:last-child {
-  margin-bottom: 0px;
-}
-
-/* HORIZONTAL RULES
-=============================================================================*/
-
-hr {
-  clear: both;
-  margin: 15px 0;
-  height: 0px;
-  overflow: hidden;
-  border: none;
-  background: transparent;
-  border-bottom: 4px solid #ddd;
-  padding: 0;
-}
-
-/* TABLES
-=============================================================================*/
-
-table th {
-  font-weight: bold;
-}
-
-table th, table td {
-  border: 1px solid #ccc;
-  padding: 6px 13px;
-}
-
-table tr {
-  border-top: 1px solid #ccc;
-  background-color: #fff;
-}
-
-table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
-
-/* IMAGES
-=============================================================================*/
-
-img {
-  max-width: 100%
-}
-</style>
-</head>
-<body>
-<h2>html閭欢鍒朵綔瀹炶返</h2>
-<p>鏈�杩戠粡甯告帴鍒板埗浣滈〉闈㈤偖浠剁殑闇�姹傘�傛湰鏂囬鍏堢畝瑕佷粙缁嶄簡html閭欢鐨勫埗浣滄�濊矾锛岀劧鍚庨拡瀵瑰伐浣滀腑椤甸潰閭欢鐨勭壒鐐癸紝鎻愪緵浜嗕竴绉嶅埗浣滄柟娉曘��</p>
-<h3>涓�銆佸浣曞埗浣渉tml閭欢</h3>
-<h5>1).html閭欢缂栫爜</h5>
-<p>鐢ㄤ簬EDM閭欢鐨剋eb缃戦〉浠ｇ爜锛屾湁涓�绯诲垪鐗规畩瑕佹眰銆俥g锛�1.瑕佹樉绀哄０鏄庢枃妗ｇ被鍨嬨�佺紪鐮佺被鍨�
-锛�'&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;'锛夛紱2.浣跨敤table 琛ㄦ牸鏉ュ竷灞�锛�3.浣跨敤鍐呰仈鏍峰紡锛�4銆佸紩鐢ㄥ浘鐗囧繀椤讳笂浼犵嚎涓婏紝浣跨敤缁濆閾炬帴銆�</p>
-<p>鏇磋缁嗚姹傝锛�<a href="http://blog.163.com/fange01@126/blog/static/12217031201284490379/">http://blog.163.com/fange01@126/blog/static/12217031201284490379/</a></p>
-<p>鍒朵綔鏁欑▼鍙傝锛� <a href="http://www.w3cplus.com/css/getting-started-with-html-emails.html">http://www.w3cplus.com/css/getting-started-with-html-emails.html</a></p>
-<h5>2). 濡備綍灏嗙紪鐮佺疆鍏ラ偖绠憋紝鍙戦�侀偖浠躲�傝繖閲屼粙缁嶄娇鐢≦Q閭鍒朵綔</h5>
-<p>a. 鏂板缓涓�灏侀偖浠� b.鐐瑰嚮鎵撳紑鏍煎紡闈㈡澘 <img src="../images/i3/w01.jpg" alt="outlook璁剧疆"/> c.鐐瑰嚮閫変腑html鏍煎紡 <img src="../images/i3/w02.jpg" alt="outlook璁剧疆"/> d.灏嗙紪鐮佸鍒舵鏂囧嵆鍙��</p>
-<img src="../images/i3/w04.jpg" alt="outlook璁剧疆"/>
-<h3>浜屻�乭tml閭欢灞�闄�</h3>
-<ol>
-<li>html閭欢瀛樺湪鍏煎鎬ч棶棰樹弗閲嶃�傞潰鍚戜笉鍚岀殑涓绘祦閭欢瀹㈡埛绔渶鍋氬吋瀹规�ф祴璇曘��</li>
-<li>澶у鏁伴偖浠跺鎴风锛坥utlook锛変細杩囨护HTML璁剧疆,绂佹鍥剧墖涓嬭浇锛屽鑷撮〉闈㈤敊涔憋紝杩欏彇鍐充簬鐢ㄦ埛瀹㈡埛绔殑璁剧疆锛屾棤娉曢伩鍏嶃�備互outlook涓轰緥锛�</li>
-</ol>
-<h3>涓夈�佽�岄拡瀵瑰伐浣滀腑澶ч儴鍒唄tml閭欢鏈変互涓嬬壒鐐癸細</h3>
-<ol>
-<li>鍐呴儴閭欢锛屽湪outlook瀹㈡埛绔腑鍒嗗彂锛�</li>
-<li>褰㈠紡绠�鍗曚互鍥剧墖涓轰富锛屼粎瑕佹眰鍦ㄥ浘鐗囨坊鍔犲嚑澶勫彲鐐瑰嚮瓒呴摼鎺ャ��</li>
-</ol>
-<p>杩欑褰㈠紡绠�鍗曠殑閭欢浠ュ浘鐗囦负涓伙紝鑰冭檻鍒伴〉闈㈠吋瀹规�э紝浠ュ強鐢ㄦ埛璁剧疆鐨勯棶棰橈紝骞舵棤閲囩敤html缂栧啓鐨勫繀瑕併��</p>
-<p>涓嬮潰浠嬬粛涓�绉嶆绫婚偖浠剁殑鍒朵綔鎬濊矾銆�</p>
-<p>浠utlook2010鐗堜负渚嬶紝鍒朵綔涓�灏佸甫鏈夎秴閾炬帴鐑尯鐨勫浘鐗囬偖浠讹細</p>
-<ol>
-<li>鏂板缓閭欢</li>
-<li>鎻掑叆鍥剧墖銆傚皢鏁村紶鍥剧墖鎸夊悎閫傚ぇ灏忓壀鍒囧苟椤哄簭鎻掑叆閭欢锛岄伩鍏嶅浘鐗囪繃澶у姞杞界紦鎱�</li>
-<li>璁剧疆鍥剧墖灞呬腑鏄剧ず銆傜偣鍑诲鑸爮锛氶偖浠剁紪杈�-鏂囨湰灞呬腑锛�</li>
-<li>
-<p>娣诲姞瓒呴摼鎺ョ儹鍖恒�傚湪杩欓噷鍒╃敤鎻掑叆鐨勨�滃舰鐘垛�濆璞℃坊鍔犺秴閾炬帴鐑尯銆�</p>
-<ol>
-<li>鎻掑叆鈥滃舰鐘垛�濆璞°�傜偣鍑伙細鎻掑叆-褰㈢姸-鐭╁舰</li>
-<li>璁剧疆閫忔槑銆傚彸閿�-鎵撳紑鈥滆缃舰鐘舵牸寮忊�濋潰鏉裤�傝缃～鍏呫�佺嚎鏉￠鑹蹭负閫忔槑</li>
-<li>娣诲姞瓒呴摼鎺�</li>
-<li>
-<p>璁剧疆鈥滃舰鐘垛�濆璞″竷灞�鏍煎紡銆傚彸閿�-鎵撳紑鈥滃叾浠栧竷灞�閫夐」闈㈡澘鈥濓紝璁剧疆濡備笅锛�</p>
-<img src="../images/i3/w04.jpg" alt="outlook璁剧疆"/>
-<p>鈥滃舰鐘垛�濆璞℃按骞充綅缃�佸瀭鐩翠綅缃繀椤昏缃负鍒嗗埆鐩稿瀛楃銆佽銆傞伩鍏嶅湪瑙嗗彛澶у皬涓嶄竴鏃讹紝浣嶇疆鏀瑰彉</p>
-</li>
-<li>褰㈢姸鈥濆璞＄Щ鑷崇儹鍖轰綅缃��4銆�5鎿嶄綔椤哄簭涓嶅彲棰犲�掋�傞渶瑕佸湪鈥滃瓧绗︺�佽鈥濇爣鍑嗕笅绉诲姩</li>
-</ol>
-</li>
-</ol>
-<p>杩欑鏂规硶骞堕潪鍒朵綔html閭欢锛屽疄璐ㄦ槸鍦ㄩ偖浠舵彃鍏ュ浘鐗囥�傞伩鍏峢tml閭欢鐨勫悇绉嶉檺鍒躲�傞�傜敤浜庤姹傜粰鍥剧墖娣诲姞瓒呴摼鎺ョ儹鍖虹殑閭欢銆�</p>
-
-</body>
-</html>
-<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

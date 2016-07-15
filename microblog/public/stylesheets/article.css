@@ -1,3 +1,8 @@
+html {
+  font-size: 100px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+}
 .font-line {
   font-size: 16px;
   line-height: 35px;
@@ -19,12 +24,18 @@
 .article .art-box .art .art-title {
   margin-bottom: 6px;
 }
-.article .art-box .art .art-title h2 {
-  font-size: 20px;
+.article .art-box .art .art-title h1 {
+  font-size: 24px;
+  padding: 1rem 0px;
 }
 .article .art-box .art .art-key {
   margin-bottom: 6px;
   font-size: 14px;
+}
+.article .art-box .art .art-vote {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666666;
 }
 .article .art-box .art .art-txt {
   font-size: 16px;
@@ -47,10 +58,24 @@
 .article .art-box .art .art-txt .art-txt-all:hover {
   color: #B1191A;
 }
-.article .art-box .art .art-vote {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #666666;
+.article .ind2 {
+  text-indent: 32px;
+}
+.article .into {
+  margin: 16px auto;
+  padding: 10px;
+  max-width: 680px;
+  width: 90%;
+  background-color: #f5f2f0;
+  border-radius: 6px;
+}
+.article .into .iframe {
+  border: 0px;
+  overflow: auto;
+}
+.article .sec ul li,
+.article .sec ol li {
+  text-indent: 16px;
 }
 .article pre {
   margin-left: 10px;
@@ -82,17 +107,249 @@
   border-radius: 5px;
   box-shadow: 0px 0px 1px 1px #C4CDD4 inset;
 }
-.article .into {
-  margin: 16px auto;
-  padding: 10px;
-  max-width: 680px;
-  width: 90%;
-  background-color: #f5f2f0;
-  border-radius: 6px;
+#md {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 auto;
+  /* BLOCKS
+ =============================================================================*/
+  /* HEADERS
+  =============================================================================*/
+  /* LINKS
+  =============================================================================*/
+  /* LISTS
+  =============================================================================*/
+  /* CODE
+  =============================================================================*/
+  /* QUOTES
+  =============================================================================*/
+  /* HORIZONTAL RULES
+  =============================================================================*/
+  /* TABLES
+  =============================================================================*/
+  /* IMAGES
+  =============================================================================*/
 }
-.article .into .iframe {
-  border: 0px;
+#md p,
+#md blockquote,
+#md ul,
+#md ol,
+#md dl,
+#md table,
+#md pre {
+  margin: 15px 0;
+}
+#md h1,
+#md h2,
+#md h3,
+#md h4,
+#md h5,
+#md h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+#md h1 tt,
+#md h1 code,
+#md h2 tt,
+#md h2 code,
+#md h3 tt,
+#md h3 code,
+#md h4 tt,
+#md h4 code,
+#md h5 tt,
+#md h5 code,
+#md h6 tt,
+#md h6 code {
+  font-size: inherit;
+}
+#md h1 {
+  font-size: 28px;
+  color: #000;
+}
+#md h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+#md h3 {
+  font-size: 18px;
+}
+#md h4 {
+  font-size: 16px;
+}
+#md h5 {
+  font-size: 14px;
+}
+#md h6 {
+  color: #777;
+  font-size: 14px;
+}
+#md a:first-child h1,
+#md a:first-child h2,
+#md a:first-child h3,
+#md a:first-child h4,
+#md a:first-child h5,
+#md a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+#md h1 + p,
+#md h2 + p,
+#md h3 + p,
+#md h4 + p,
+#md h5 + p,
+#md h6 + p {
+  margin-top: 10px;
+}
+#md a {
+  color: #4183C4;
+  text-decoration: none;
+}
+#md a:hover {
+  text-decoration: underline;
+}
+#md ul,
+#md ol {
+  padding-left: 30px;
+}
+#md ul li > :first-child,
+#md ol li > :first-child,
+#md ul li ul:first-of-type,
+#md ol li ol:first-of-type,
+#md ul li ol:first-of-type,
+#md ol li ul:first-of-type {
+  margin-top: 0px;
+}
+#md ul ul,
+#md ul ol,
+#md ol ol,
+#md ol ul {
+  margin-bottom: 0;
+}
+#md dl {
+  padding: 0;
+}
+#md dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+#md dl dt:first-child {
+  padding: 0;
+}
+#md dl dt > :first-child {
+  margin-top: 0px;
+}
+#md dl dt > :last-child {
+  margin-bottom: 0px;
+}
+#md dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+#md dl dd > :first-child {
+  margin-top: 0px;
+}
+#md dl dd > :last-child {
+  margin-bottom: 0px;
+}
+#md pre,
+#md code,
+#md tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+#md code,
+#md tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+#md pre > code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+#md pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
   overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+#md pre code,
+#md pre tt {
+  background-color: transparent;
+  border: none;
+}
+#md kbd {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #DDDDDD;
+  background-image: linear-gradient(#F1F1F1, #DDDDDD);
+  background-repeat: repeat-x;
+  border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+  border-image: none;
+  border-radius: 2px 2px 2px 2px;
+  border-style: solid;
+  border-width: 1px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 10px;
+  padding: 1px 4px;
+}
+#md blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+#md blockquote > :first-child {
+  margin-top: 0px;
+}
+#md blockquote > :last-child {
+  margin-bottom: 0px;
+}
+#md hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+#md table th {
+  font-weight: bold;
+}
+#md table th,
+#md table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+#md table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+#md table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+#md img {
+  max-width: 100%;
 }
 .tagiframe {
   height: 340px;

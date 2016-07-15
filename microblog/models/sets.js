@@ -1,48 +1,50 @@
+/*yangjiei
+* 创建mongodb数据库集合
+* 创建参数：{ setName:"集合名称",setType："集合文档对象属性"}
+* 仅提供最基础存储、读取接口
+* */
+
+
 var mongodb = require('./db');
-function User(user) {
-    if(user){
-        this.name = user.name;
-        this.text = user.text;
-        this.email = user.email;
-        this.date = user.date;
+function Sets(obj) {    //创建集合
+    if(obj){
+        this.setName = obj.setName;
+        this.setType = obj.type||null;   //默认"id",指定为集合对象索引项
     }
 };
-module.exports = User;
-User.prototype.save = function save(callback) {
+module.exports = Sets;
+Sets.prototype.save = function save(doc,callback) {
+    var setName = this.setName;
 // 存入 Mongodb 的文档
-    var user = {
-        name: this.name,
-        text: this.text,
-        email: this.email,
-        date:this.date
-    };
+    var doc = doc||null;
     mongodb.open(function (err, db) {
         if (err) {
             return callback(err);
         }
 // 打开users 集合
-        db.collection('users', function (err, collection) {
+        db.collection(setName, function (err, collection) {
             if (err) {
                 mongodb.close();
                 return callback(err);
             }
 // 为 name 属性添加索引
-            collection.ensureIndex('name', {unique: true});   //name 为标记
+            collection.ensureIndex(doc['id'], {unique: true});   //name 为标记
 // 写入 user 文档
-            collection.insert(user, {safe: true}, function (err, user) {
+            collection.insert(doc, {safe: true}, function (err, doc) {
                 mongodb.close();
-                callback(err, user);
+                callback(err, doc);
             });
         });
     });
 };
-User.get = function get(callback) {
+Sets.prototype.get = function get(callback) {
+    var setName = this.setName;
     mongodb.open(function (err, db) {
         if (err) {
             return callback(err);
         }
 // 读取 users 集合
-        db.collection('users', function (err, collection) {
+        db.collection(setName, function (err, collection) {
             if (err) {
                 mongodb.close();
                 return callback(err);
