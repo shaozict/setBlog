@@ -86,3 +86,28 @@
         })
     })
 })();
+$(function(){
+    var $inFile = $("#inFile");
+    $inFile.on("change",function(){
+        var $tar = $(this);
+        if($tar.val() !=''){
+            var reader = new FileReader();
+            var file = document.getElementById("inFile").files;
+            reader.readAsText(file[0]);
+            reader.onload = function(){
+                var result = this.result;
+                $.ajax({
+                    type: "POST",
+                    url: "/upload/mes",
+                    data: {
+                        result:result,
+                        name:file[0].name
+                    },
+                    success: function(msg){
+                        alert( msg );
+                    }
+                })
+            }
+        }
+    })
+})

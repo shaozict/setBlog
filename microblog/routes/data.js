@@ -25,6 +25,13 @@ message.art = {
             "key": "Html邮件",
             "abstract": "最近经常接到制作页面邮件的需求。本文首先简要介绍了html邮件的制作思路，然后针对工作中页面邮件的特点，提供了一种制作方法。",
             "href": "3"
+        }, {
+            "autor":"杨杰i",
+            "date":"2016年7月21日",
+            "title": "如何更新、查看font图标文件",
+            "key": "font图标,IcoMoon",
+            "abstract": "在工作中相比建立一个新font字体文件，更常应用到的是更新、查看原有font文件。IcoMoon提供了新建、更新、查看font文件的一条龙解决方案。本文主要介绍了font图标的使用，通过IcoMoon网站，新建、更新、查看 font文件。",
+            "href": "4"
         }
     ],
     "unit":true

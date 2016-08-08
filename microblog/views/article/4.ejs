@@ -1,0 +1,84 @@
+<div class="article">
+    <div class="art-box">
+        <div class="art">
+            <div class="art-title">
+                <h1>如何更新、查看font图标文件</h1>
+            </div>
+            <div class="art-key">
+                <p>标签：<em>font图标</em>,<em>IcoMoon</em></p>
+            </div>
+            <div class="art-vote">
+                <p>2016-07-21 by 杨杰</p>
+            </div>
+            <div id="md" class="art-txt">
+                <p>在工作中相比建立一个新font字体文件，更常应用到的是更新、查看原有font文件。IcoMoon提供了新建、更新、查看font文件的一条龙解决方案。本文主要介绍了font图标的使用，通过IcoMoon网站，新建、更新、查看 font文件。</p>
+                <h3>一.IcoMoon</h3>
+                <p>访问链接：<a href="https://icomoon.io/#app-features"> https://icomoon.io/#app-features</a></p>
+                <h3>二.页面中IcoMoon demo中图标字体使用简介</h3>
+                <h5>css中：</h5>
+<pre><code>@font-face {        //定义图标字体
+        font-family: 'icomoon';
+        src: url('fonts/icomoon.eot?ex9bd7');
+        src: url('fonts/icomoon.eot?ex9bd7#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?ex9bd7') format('truetype'),
+        url('fonts/icomoon.woff?ex9bd7') format('woff'),
+        url('fonts/icomoon.svg?ex9bd7#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        [class^=&quot;icon-&quot;], [class*=&quot; icon-&quot;] {
+        /*use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;       //字体抗锯齿,使用后字体看起来会更清晰舒服。
+        -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-uniE619:before {
+        content: &quot;\e619&quot;;        //&quot;\e619&quot;转义字符
+        }
+
+        .icomoon {
+        font-family: 'icomoon' !important;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;       //字体抗锯齿,使用后字体看起来会更清晰舒服。
+        -moz-osx-font-smoothing: grayscale;
+        }
+    </code></pre>
+
+                <h5>html调用：</h5>
+<pre><code>1.&lt;span class=&quot;icon-uniE619&quot;&gt;&lt;/span&gt;
+2.&lt;span class=&quot;icomoon&quot;&gt;&amp;#xe619&lt;/span&gt;
+    </code></pre>
+
+                <h3>三.更新、查看已有font图标文件<img src="/images/i4/w01.png" alt="font文件" /></h3>
+                <ol>
+                    <li>
+                        <p>1.登陆：<a href="https://icomoon.io/">https://icomoon.io/</a></p>
+                    </li>
+                    <li>
+                        <p>2.点击<img src="/images/i4/w02.jpg" alt="font文件">,进入<a href="https://icomoon.io/app/#/select">https://icomoon.io/app/#/select</a></p>
+                    </li>
+                    <li>
+                        <p>3.点击<img src="/images/i4/w03.jpg" alt="font文件">,上传已有待扩展svg文件</p>
+                    </li>
+                    <li>
+                        <p>4.点击<img src="/images/i4/w04.jpg" alt="font文件">-&gt;<img src="/images/i4/w05.jpg" alt="font文件">，添加要加入的新图标svg文件</p>
+                    </li>
+                    <li>
+                        <p>5.点击全选<img src="/images/i4/w06.jpg" alt="font文件">-&gt;<img src="/images/i4/w07.jpg" alt="font文件">创造新扩展font图标文件</p>
+                    </li>
+                </ol>
+                <p><em>扩展文件不会改变原有图标的引用方式，可以放心扩展。</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
